@@ -13,19 +13,22 @@ import AVFoundation
 class TextToAudioMorse: UIViewController, UITextViewDelegate {
     @IBOutlet weak var inputTextView: UITextView!
     @IBOutlet weak var playPauseButton: UIButton!
-    var audioPlayer: AVAudioPlayer?
+    var audioPlayer = AudioHelper.player
+    let queue = OperationQueue()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        queue.maxConcurrentOperationCount = 1
     }
 
     func textViewDidChange(_ textView: UITextView) {
-
+        queue.cancelAllOperations()
+        let operation = CreateSoundOperation(inputString: textView.text)
+        queue.addOperation(operation)
     }
 
     @IBAction func playPauseTapped(_ sender: UIButton) {
-        let morseAudio: MorseAudio = MorseAudio(inputMorseString: inputTextView.text)
-        morseAudio.play()
+        audioPlayer.playSound()
     }
 
 

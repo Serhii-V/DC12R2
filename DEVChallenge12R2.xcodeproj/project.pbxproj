@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C514C4B720BA9E2900A7E1D0 /* MorseAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514C4B620BA9E2900A7E1D0 /* MorseAudio.swift */; };
 		C514C4B920BAACB200A7E1D0 /* DictionaryGetKeyByValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514C4B820BAACB200A7E1D0 /* DictionaryGetKeyByValue.swift */; };
 		C514C4C120BAB5C700A7E1D0 /* silent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C514C4BE20BAB5C700A7E1D0 /* silent.mp3 */; };
 		C514C4C220BAB5C700A7E1D0 /* dot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C514C4BF20BAB5C700A7E1D0 /* dot.mp3 */; };
 		C514C4C320BAB5C700A7E1D0 /* dash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C514C4C020BAB5C700A7E1D0 /* dash.mp3 */; };
-		C514C4C920BC2BB800A7E1D0 /* My.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C514C4C820BC2BB800A7E1D0 /* My.mp3 */; };
 		C514C4CD20BC38D900A7E1D0 /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514C4CC20BC38D900A7E1D0 /* DropDownButton.swift */; };
 		C514C4D020BC3B4000A7E1D0 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514C4CF20BC3B4000A7E1D0 /* DropDownView.swift */; };
 		C57D093120B83DDE00DED69C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D093020B83DDE00DED69C /* AppDelegate.swift */; };
@@ -23,15 +21,17 @@
 		C57D094D20B8477700DED69C /* AudioMorseToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D094C20B8477700DED69C /* AudioMorseToText.swift */; };
 		C57D094F20B84AD700DED69C /* AudioControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D094E20B84AD700DED69C /* AudioControlView.swift */; };
 		C57D095320B84C8500DED69C /* AudioPlaybackSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D095220B84C8500DED69C /* AudioPlaybackSlider.swift */; };
+		C5D3DAA020BEC8C4009C7AE8 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3DA9F20BEC8C4009C7AE8 /* AsyncOperation.swift */; };
+		C5D3DAA320BEC985009C7AE8 /* CreateSoundOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3DAA220BEC985009C7AE8 /* CreateSoundOperation.swift */; };
+		C5D3DAA620BECD02009C7AE8 /* MorseConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3DAA520BECD02009C7AE8 /* MorseConvertable.swift */; };
+		C5D3DAA820BED503009C7AE8 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3DAA720BED503009C7AE8 /* AudioHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C514C4B620BA9E2900A7E1D0 /* MorseAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseAudio.swift; sourceTree = "<group>"; };
 		C514C4B820BAACB200A7E1D0 /* DictionaryGetKeyByValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryGetKeyByValue.swift; sourceTree = "<group>"; };
 		C514C4BE20BAB5C700A7E1D0 /* silent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silent.mp3; sourceTree = "<group>"; };
 		C514C4BF20BAB5C700A7E1D0 /* dot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dot.mp3; sourceTree = "<group>"; };
 		C514C4C020BAB5C700A7E1D0 /* dash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dash.mp3; sourceTree = "<group>"; };
-		C514C4C820BC2BB800A7E1D0 /* My.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = My.mp3; sourceTree = "<group>"; };
 		C514C4CC20BC38D900A7E1D0 /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
 		C514C4CF20BC3B4000A7E1D0 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		C57D092D20B83DDE00DED69C /* DEVChallenge12R2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEVChallenge12R2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +44,10 @@
 		C57D094C20B8477700DED69C /* AudioMorseToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMorseToText.swift; sourceTree = "<group>"; };
 		C57D094E20B84AD700DED69C /* AudioControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioControlView.swift; sourceTree = "<group>"; };
 		C57D095220B84C8500DED69C /* AudioPlaybackSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlaybackSlider.swift; sourceTree = "<group>"; };
+		C5D3DA9F20BEC8C4009C7AE8 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		C5D3DAA220BEC985009C7AE8 /* CreateSoundOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSoundOperation.swift; sourceTree = "<group>"; };
+		C5D3DAA520BECD02009C7AE8 /* MorseConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseConvertable.swift; sourceTree = "<group>"; };
+		C5D3DAA720BED503009C7AE8 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,6 @@
 				C514C4C020BAB5C700A7E1D0 /* dash.mp3 */,
 				C514C4BF20BAB5C700A7E1D0 /* dot.mp3 */,
 				C514C4BE20BAB5C700A7E1D0 /* silent.mp3 */,
-				C514C4C820BC2BB800A7E1D0 /* My.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -82,6 +85,7 @@
 			children = (
 				C57D092F20B83DDE00DED69C /* DEVChallenge12R2 */,
 				C57D092E20B83DDE00DED69C /* Products */,
+				C5E8EA3C20BEF3D40034C489 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +141,7 @@
 		C57D094520B8464200DED69C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C5D3DAA920BEE540009C7AE8 /* ThirdParty */,
 				C57D093720B83DE100DED69C /* Assets.xcassets */,
 				C514C4AF20BA9D8C00A7E1D0 /* Sounds */,
 			);
@@ -164,7 +169,9 @@
 		C57D094820B8468300DED69C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C514C4B620BA9E2900A7E1D0 /* MorseAudio.swift */,
+				C5D3DAA420BECCDD009C7AE8 /* Protocols */,
+				C5D3DAA120BEC94C009C7AE8 /* Operations */,
+				C5D3DAA720BED503009C7AE8 /* AudioHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +182,37 @@
 				C514C4B820BAACB200A7E1D0 /* DictionaryGetKeyByValue.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C5D3DAA120BEC94C009C7AE8 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				C5D3DA9F20BEC8C4009C7AE8 /* AsyncOperation.swift */,
+				C5D3DAA220BEC985009C7AE8 /* CreateSoundOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		C5D3DAA420BECCDD009C7AE8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C5D3DAA520BECD02009C7AE8 /* MorseConvertable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C5D3DAA920BEE540009C7AE8 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		C5E8EA3C20BEF3D40034C489 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +275,6 @@
 			files = (
 				C57D093B20B83DE100DED69C /* LaunchScreen.storyboard in Resources */,
 				C57D093820B83DE100DED69C /* Assets.xcassets in Resources */,
-				C514C4C920BC2BB800A7E1D0 /* My.mp3 in Resources */,
 				C514C4C320BAB5C700A7E1D0 /* dash.mp3 in Resources */,
 				C57D093620B83DDE00DED69C /* Main.storyboard in Resources */,
 				C514C4C220BAB5C700A7E1D0 /* dot.mp3 in Resources */,
@@ -252,15 +289,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5D3DAA620BECD02009C7AE8 /* MorseConvertable.swift in Sources */,
 				C514C4CD20BC38D900A7E1D0 /* DropDownButton.swift in Sources */,
 				C57D093120B83DDE00DED69C /* AppDelegate.swift in Sources */,
 				C514C4B920BAACB200A7E1D0 /* DictionaryGetKeyByValue.swift in Sources */,
 				C57D094B20B8475500DED69C /* TextToAudioMorse.swift in Sources */,
 				C57D094D20B8477700DED69C /* AudioMorseToText.swift in Sources */,
+				C5D3DAA820BED503009C7AE8 /* AudioHelper.swift in Sources */,
 				C514C4D020BC3B4000A7E1D0 /* DropDownView.swift in Sources */,
 				C57D095320B84C8500DED69C /* AudioPlaybackSlider.swift in Sources */,
 				C57D094F20B84AD700DED69C /* AudioControlView.swift in Sources */,
-				C514C4B720BA9E2900A7E1D0 /* MorseAudio.swift in Sources */,
+				C5D3DAA020BEC8C4009C7AE8 /* AsyncOperation.swift in Sources */,
+				C5D3DAA320BEC985009C7AE8 /* CreateSoundOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
