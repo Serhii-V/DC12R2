@@ -13,7 +13,19 @@ import AVFoundation
 class AudioHelper {
     static let player = AudioHelper()
     var audioPlayer: AVAudioPlayer?
-    var audioTimer: Timer?
+    let timeFormatter = NumberFormatter()
+    var isDraggingTimeSlider = false
+
+    var isPlaying = false {
+        didSet {
+            guard let _ = audioPlayer else { return }
+            if isPlaying {
+                audioPlayer?.play()
+            } else {
+                audioPlayer?.stop()
+            }
+        }
+    }
 
     var audioPath: URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -23,7 +35,7 @@ class AudioHelper {
 
     private init() {}
 
-    func playSound() {
+    func createSound() {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -39,3 +51,4 @@ class AudioHelper {
         try? FileManager.default.removeItem(at: audioPath)
     }
 }
+
