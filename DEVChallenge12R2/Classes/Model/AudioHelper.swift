@@ -40,11 +40,24 @@ class AudioHelper {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
             audioPlayer = try AVAudioPlayer(contentsOf: audioPath)
+            audioPlayer?.enableRate = true
             audioPlayer?.prepareToPlay()
             audioPlayer?.play()
         } catch (let error) {
             print(error.localizedDescription)
         }
+    }
+
+    func changeTrackPosition(interval: Float) {
+        guard let player = audioPlayer else { return }
+        let time = player.currentTime + Double(interval)
+        if time > 0 , time < player.duration {
+            player.currentTime = time
+        }
+    }
+
+    func changeSpeed(speed: Float) {
+        audioPlayer?.rate = speed
     }
 
     func removeAudioFile() {

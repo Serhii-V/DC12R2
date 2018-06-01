@@ -9,8 +9,14 @@
 import Foundation
 import AVFoundation
 
+protocol SoundOperationDelegate: NSObjectProtocol {
+    func startOperation()
+    func finishOperation()
+}
+
 class CreateSoundOperation: AsyncOperation, MorseConvertable {
     private var morseString: String
+    weak var delegate: SoundOperationDelegate?
 
     init(inputString: String) {
         morseString = inputString

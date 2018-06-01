@@ -54,6 +54,7 @@ extension MorseConvertable {
                  "0": "- - - - -",
                  " ": "    "]
     }
+
     func textToMorseCode(input: String) -> String {
         let inputStr: String = input.uppercased()
         var outputString: String = String()
@@ -82,6 +83,5 @@ extension MorseConvertable {
             }
         }
         return soundArray
-
     }
 }
