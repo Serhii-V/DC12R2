@@ -114,7 +114,6 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
         if textView.text == "" {
             spinner.stop()
         }
-        print(textView.text)
         queue.addOperation(operation)
         isPlay = false
         isNewTrack = true
