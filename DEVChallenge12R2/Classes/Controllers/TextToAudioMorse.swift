@@ -21,12 +21,14 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
     @IBOutlet weak var playSpeedLabel: UILabel!
     @IBOutlet weak var backwardSpeedLabel: UILabel!
     @IBOutlet weak var forwardSpeedLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+
 
     let timeFormatter = NumberFormatter()
     var audioPlayer = AudioHelper.player
     var audioTimer: Timer?
     let queue = OperationQueue()
-    var spinner: Spinner?
+    var spinner: Spinner = Spinner()
     var isDragging = false
     private let playSpeedArray: [Float] = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0]
     private let speedArray: [Float] = [5.0, 10.0, 30.0]
@@ -82,26 +84,69 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
         timeFormatter.roundingMode = .down
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if Storage.isFirstEnter() {
+            showInfo()
+            Storage.firstEnterDone()
+        }
+    }
+
     func setupUI() {
         hideKeyboardWhenTappedAround()
         inputTextView.layer.cornerRadius = inputTextView.frame.height / 10
+        inputTextView.contentInset.top = 1
         outputTextView.layer.cornerRadius = outputTextView.frame.height / 10
         timeSlider.isUserInteractionEnabled = false
     }
 
     func textViewDidChange(_ textView: UITextView) {
-        spinner = Spinner()
-        spinner?.start()
+        audioPlayer.audioPlayer?.currentTime = 0.0
+        spinner.start()
         audioPlayer.removeAudioFile()
         outputTextView.text = textToMorseCode(input: textView.text)
         queue.cancelAllOperations()
         let operation = CreateSoundOperation(inputString: textView.text)
-        operation.delegate = self
-        queue.addOperation(operation)
-        isNewTrack = true
-        if operation.isFinished {
-            spinner?.stop()
+        operation.completionBlock = {
+            DispatchQueue.main.async {
+                self.spinner.stop()
+            }
         }
+        if textView.text == "" {
+            spinner.stop()
+        }
+        print(textView.text)
+        queue.addOperation(operation)
+        isPlay = false
+        isNewTrack = true
+    }
+
+    func showInfo() {
+        let alertController = UIAlertController(title: "Tutorial", message: "", preferredStyle: .alert)
+        let image = #imageLiteral(resourceName: "info")
+        alertController.addImage(image)
+        alertController.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    func showEmptyAlert() {
+        let alertController = UIAlertController(title: "Please, input text", message: "", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    // MARK keyboard and scrollview
+    func keyboardWillShow(notification: Notification) {
+        guard let userInfo = notification.userInfo, let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        scrollView.bounces = true
+        let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: 0)
+        scrollView.contentInset = contentInset
+    }
+
+    func keyboardWillHide(notification: Notification) {
+        scrollView.contentInset = UIEdgeInsets.zero
+        scrollView.bounces = false
     }
 
     // MARK: Timer setup
@@ -180,14 +225,19 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
 
     // MARK: Button tapped
     @IBAction func playPauseTapped(_ sender: UIButton) {
+        if inputTextView.text == "" {
+            showEmptyAlert()
+        } else {
         if isNewTrack {
             audioPlayer.createSound()
             audioPlayer.changeSpeed(speed: playSpeed)
             createTimer()
             isNewTrack = false
             timeSlider.isUserInteractionEnabled = true
+            isPlay = !isPlay
         }
         isPlay = !isPlay
+        }
     }
 
     @IBAction func forwardButtonTapped(_ sender: UIButton) {
@@ -196,6 +246,10 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
 
     @IBAction func backwardButtonTapped(_ sender: UIButton) {
         audioPlayer.changeTrackPosition(interval: -backwardSpeed)
+    }
+
+    @IBAction func infoButttonTapped(_ sender: UIButton) {
+        showInfo()
     }
 
     // MARK: Slider actions
@@ -217,15 +271,6 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
     }
 }
 
-extension TextToAudioMorse: SoundOperationDelegate {
-    func startOperation() {
-        spinner?.start()
-    }
-
-    func finishOperation() {
-        spinner?.stop()
-    }
-}
 
 
 

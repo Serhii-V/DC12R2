@@ -62,6 +62,11 @@
 		C5F53EA120C0B43500BE6D75 /* dash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5F53E9E20C0B43500BE6D75 /* dash.mp3 */; };
 		C5F53EA320C1385900BE6D75 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F53EA220C1385900BE6D75 /* Spinner.swift */; };
 		C5F53EA520C138EF00BE6D75 /* UIAplication+topVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F53EA420C138EF00BE6D75 /* UIAplication+topVC.swift */; };
+		C5F53EAC20C16C2600BE6D75 /* dash7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5F53EAA20C16C2500BE6D75 /* dash7.mp3 */; };
+		C5F53EAD20C16C2600BE6D75 /* dot7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5F53EAB20C16C2500BE6D75 /* dot7.mp3 */; };
+		C5F53EAF20C1767B00BE6D75 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F53EAE20C1767B00BE6D75 /* Storage.swift */; };
+		C5F53EB120C17EB300BE6D75 /* UIalertController+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F53EB020C17EB300BE6D75 /* UIalertController+Image.swift */; };
+		C5F53EB320C17F1200BE6D75 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F53EB220C17F1200BE6D75 /* UIImage+Resize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +128,11 @@
 		C5F53E9E20C0B43500BE6D75 /* dash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dash.mp3; sourceTree = "<group>"; };
 		C5F53EA220C1385900BE6D75 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		C5F53EA420C138EF00BE6D75 /* UIAplication+topVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAplication+topVC.swift"; sourceTree = "<group>"; };
+		C5F53EAA20C16C2500BE6D75 /* dash7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dash7.mp3; sourceTree = "<group>"; };
+		C5F53EAB20C16C2500BE6D75 /* dot7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dot7.mp3; sourceTree = "<group>"; };
+		C5F53EAE20C1767B00BE6D75 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		C5F53EB020C17EB300BE6D75 /* UIalertController+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIalertController+Image.swift"; sourceTree = "<group>"; };
+		C5F53EB220C17F1200BE6D75 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +151,8 @@
 			children = (
 				C5F53E9E20C0B43500BE6D75 /* dash.mp3 */,
 				C5F53E9D20C0B43400BE6D75 /* dot.mp3 */,
+				C5F53EAA20C16C2500BE6D75 /* dash7.mp3 */,
+				C5F53EAB20C16C2500BE6D75 /* dot7.mp3 */,
 				C5F53E9C20C0B43400BE6D75 /* silent.mp3 */,
 			);
 			path = Sounds;
@@ -238,6 +250,7 @@
 				C5D3DAA420BECCDD009C7AE8 /* Protocols */,
 				C5D3DAA120BEC94C009C7AE8 /* Operations */,
 				C5D3DAA720BED503009C7AE8 /* AudioHelper.swift */,
+				C5F53EAE20C1767B00BE6D75 /* Storage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +262,8 @@
 				C5F53E5020BFEFFB00BE6D75 /* UIViewController+HideKeyBoard.swift */,
 				C5F53E9A20C0727C00BE6D75 /* Array+nextOrPrev.swift */,
 				C5F53EA420C138EF00BE6D75 /* UIAplication+topVC.swift */,
+				C5F53EB020C17EB300BE6D75 /* UIalertController+Image.swift */,
+				C5F53EB220C17F1200BE6D75 /* UIImage+Resize.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -388,10 +403,12 @@
 			files = (
 				C5F53EA020C0B43500BE6D75 /* dot.mp3 in Resources */,
 				C57D093B20B83DE100DED69C /* LaunchScreen.storyboard in Resources */,
+				C5F53EAD20C16C2600BE6D75 /* dot7.mp3 in Resources */,
 				C57D093820B83DE100DED69C /* Assets.xcassets in Resources */,
 				C57D093620B83DDE00DED69C /* Main.storyboard in Resources */,
 				C5F53E9F20C0B43500BE6D75 /* silent.mp3 in Resources */,
 				C5F53E8D20BFF9E900BE6D75 /* Info.plist in Resources */,
+				C5F53EAC20C16C2600BE6D75 /* dash7.mp3 in Resources */,
 				C5F53EA120C0B43500BE6D75 /* dash.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,11 +428,13 @@
 				C5F53E9420BFF9E900BE6D75 /* ConstraintDescription.swift in Sources */,
 				C5F53E8120BFF9E900BE6D75 /* ConstraintLayoutSupport.swift in Sources */,
 				C57D093120B83DDE00DED69C /* AppDelegate.swift in Sources */,
+				C5F53EB120C17EB300BE6D75 /* UIalertController+Image.swift in Sources */,
 				C5F53E8B20BFF9E900BE6D75 /* UILayoutSupport+Extensions.swift in Sources */,
 				C5F53E4F20BFE57200BE6D75 /* GradientView.swift in Sources */,
 				C5F53E8320BFF9E900BE6D75 /* ConstraintOffsetTarget.swift in Sources */,
 				C5F53E8C20BFF9E900BE6D75 /* ConstraintMaker.swift in Sources */,
 				C5F53E7720BFF9E900BE6D75 /* ConstraintViewDSL.swift in Sources */,
+				C5F53EB320C17F1200BE6D75 /* UIImage+Resize.swift in Sources */,
 				C514C4B920BAACB200A7E1D0 /* DictionaryGetKeyByValue.swift in Sources */,
 				C5F53E7920BFF9E900BE6D75 /* LayoutConstraint.swift in Sources */,
 				C5F53E7F20BFF9E900BE6D75 /* ConstraintLayoutGuide.swift in Sources */,
@@ -439,6 +458,7 @@
 				C5F53E9820BFF9E900BE6D75 /* Typealiases.swift in Sources */,
 				C5F53E7A20BFF9E900BE6D75 /* ConstraintMakerRelatable.swift in Sources */,
 				C57D095320B84C8500DED69C /* AudioPlaybackSlider.swift in Sources */,
+				C5F53EAF20C1767B00BE6D75 /* Storage.swift in Sources */,
 				C5F53E8920BFF9E900BE6D75 /* ConstraintView.swift in Sources */,
 				C5F53E9B20C0727C00BE6D75 /* Array+nextOrPrev.swift in Sources */,
 				C5F53EA320C1385900BE6D75 /* Spinner.swift in Sources */,

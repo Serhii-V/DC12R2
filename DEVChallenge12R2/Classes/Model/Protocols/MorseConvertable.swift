@@ -75,9 +75,9 @@ extension MorseConvertable {
             case " ":
                 soundArray.append("silent")
             case ".":
-                soundArray.append("dot")
+                soundArray.append("dot7")
             case "-":
-                soundArray.append("dash")
+                soundArray.append("dash7")
             default:
                 continue
             }

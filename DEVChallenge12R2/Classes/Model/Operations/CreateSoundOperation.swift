@@ -9,14 +9,9 @@
 import Foundation
 import AVFoundation
 
-protocol SoundOperationDelegate: NSObjectProtocol {
-    func startOperation()
-    func finishOperation()
-}
 
 class CreateSoundOperation: AsyncOperation, MorseConvertable {
     private var morseString: String
-    weak var delegate: SoundOperationDelegate?
 
     init(inputString: String) {
         morseString = inputString
@@ -24,7 +19,7 @@ class CreateSoundOperation: AsyncOperation, MorseConvertable {
     }
 
     override func main() {
-        if isCancelled { state = .finished; return }
+        if isCancelled { state = .finished; return}
         AudioHelper.player.removeAudioFile()
         let soundFiles = textToSoundCode(input: morseString)
         var startTime: CMTime = kCMTimeZero
@@ -34,7 +29,6 @@ class CreateSoundOperation: AsyncOperation, MorseConvertable {
         for fileName in soundFiles {
             if isCancelled { state = .finished; return }
             let sound: String = Bundle.main.path(forResource: fileName, ofType: "mp3")!
-
             let url: URL = URL(fileURLWithPath: sound)
             let avAsset: AVURLAsset = AVURLAsset(url: url)
             let timeRange: CMTimeRange = CMTimeRangeMake(kCMTimeZero, avAsset.duration)

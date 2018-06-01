@@ -83,6 +83,7 @@ class Spinner: UIView {
     }
 
     private func spin(_ vc: UIViewController) {
+        guard self.superview != vc else { spinner?.startAnimating(); return }
         vc.view.addSubview(self)
         spinner?.startAnimating()
     }
