@@ -2,11 +2,10 @@
 //  UIViewController+HideKeyBoard.swift
 //  DEVChallenge12R2
 //
-//  Created by Serhii on 5/31/18.
-//  Copyright © 2018 Serhii. All rights reserved.
+//  Created by " " on 5/31/18.
+//  Copyright © 2018 " ". All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIViewController {

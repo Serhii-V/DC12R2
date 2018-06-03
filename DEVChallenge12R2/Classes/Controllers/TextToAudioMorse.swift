@@ -2,8 +2,8 @@
 //  TextToAudioMorse.swift
 //  DEVChallenge12R2
 //
-//  Created by Serhii on 5/25/18.
-//  Copyright © 2018 Serhii. All rights reserved.
+//  Created by " " on 5/25/18.
+//  Copyright © 2018 " ". All rights reserved.
 //
 
 import UIKit
@@ -133,7 +133,7 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
         self.present(alertController, animated: true, completion: nil)
     }
 
-    // MARK keyboard and scrollview
+    // MARK: - keyboard and scrollview
     func keyboardWillShow(notification: Notification) {
         guard let userInfo = notification.userInfo, let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             return
@@ -148,7 +148,7 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
         scrollView.bounces = false
     }
 
-    // MARK: Timer setup
+    // MARK: - Timer setup
     func createTimer() {
         if audioTimer != nil {
             audioTimer!.invalidate()
@@ -175,7 +175,7 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
         }
     }
 
-    // MARK: Button speed setup
+    // MARK: - Button speed setup
     func buttonAddGesture() {
         let playPauseButtonGestureRight = UISwipeGestureRecognizer(target: self, action: #selector(speedUpPlay(sender:)))
         playPauseButtonGestureRight.direction = .right
@@ -222,7 +222,7 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
         backwardSpeed = speedArray.prevValue(inputValue: backwardSpeed)
     }
 
-    // MARK: Button tapped
+    // MARK: - Button tapped
     @IBAction func playPauseTapped(_ sender: UIButton) {
         if inputTextView.text == "" {
             showEmptyAlert()
@@ -251,7 +251,7 @@ class TextToAudioMorse: UIViewController, UITextViewDelegate, MorseConvertable {
         showInfo()
     }
 
-    // MARK: Slider actions
+    // MARK: - Slider actions
     @IBAction func timeChanged(_ sender: UISlider) {
         guard let player = audioPlayer.audioPlayer else { return }
         player.currentTime = player.duration * Double(sender.value)

@@ -14,7 +14,6 @@
 		C57D093B20B83DE100DED69C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57D093920B83DE100DED69C /* LaunchScreen.storyboard */; };
 		C57D094B20B8475500DED69C /* TextToAudioMorse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D094A20B8475500DED69C /* TextToAudioMorse.swift */; };
 		C57D094D20B8477700DED69C /* AudioMorseToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D094C20B8477700DED69C /* AudioMorseToText.swift */; };
-		C57D095320B84C8500DED69C /* AudioPlaybackSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D095220B84C8500DED69C /* AudioPlaybackSlider.swift */; };
 		C5D3DAA020BEC8C4009C7AE8 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3DA9F20BEC8C4009C7AE8 /* AsyncOperation.swift */; };
 		C5D3DAA320BEC985009C7AE8 /* CreateSoundOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3DAA220BEC985009C7AE8 /* CreateSoundOperation.swift */; };
 		C5D3DAA620BECD02009C7AE8 /* MorseConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3DAA520BECD02009C7AE8 /* MorseConvertable.swift */; };
@@ -67,6 +66,7 @@
 		C5F53EAF20C1767B00BE6D75 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F53EAE20C1767B00BE6D75 /* Storage.swift */; };
 		C5F53EB120C17EB300BE6D75 /* UIalertController+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F53EB020C17EB300BE6D75 /* UIalertController+Image.swift */; };
 		C5F53EB320C17F1200BE6D75 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F53EB220C17F1200BE6D75 /* UIImage+Resize.swift */; };
+		C5F53EB720C3F55500BE6D75 /* RecHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F53EB620C3F55500BE6D75 /* RecHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +79,6 @@
 		C57D093C20B83DE100DED69C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C57D094A20B8475500DED69C /* TextToAudioMorse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToAudioMorse.swift; sourceTree = "<group>"; };
 		C57D094C20B8477700DED69C /* AudioMorseToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMorseToText.swift; sourceTree = "<group>"; };
-		C57D095220B84C8500DED69C /* AudioPlaybackSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlaybackSlider.swift; sourceTree = "<group>"; };
 		C5D3DA9F20BEC8C4009C7AE8 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		C5D3DAA220BEC985009C7AE8 /* CreateSoundOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSoundOperation.swift; sourceTree = "<group>"; };
 		C5D3DAA520BECD02009C7AE8 /* MorseConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseConvertable.swift; sourceTree = "<group>"; };
@@ -133,6 +132,7 @@
 		C5F53EAE20C1767B00BE6D75 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		C5F53EB020C17EB300BE6D75 /* UIalertController+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIalertController+Image.swift"; sourceTree = "<group>"; };
 		C5F53EB220C17F1200BE6D75 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		C5F53EB620C3F55500BE6D75 /* RecHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				C5F53E4E20BFE57200BE6D75 /* GradientView.swift */,
-				C57D095220B84C8500DED69C /* AudioPlaybackSlider.swift */,
 				C5F53EA220C1385900BE6D75 /* Spinner.swift */,
 			);
 			path = CustomUI;
@@ -250,6 +249,7 @@
 				C5D3DAA420BECCDD009C7AE8 /* Protocols */,
 				C5D3DAA120BEC94C009C7AE8 /* Operations */,
 				C5D3DAA720BED503009C7AE8 /* AudioHelper.swift */,
+				C5F53EB620C3F55500BE6D75 /* RecHelper.swift */,
 				C5F53EAE20C1767B00BE6D75 /* Storage.swift */,
 			);
 			path = Model;
@@ -442,6 +442,7 @@
 				C5F53E9220BFF9E900BE6D75 /* ConstraintMakerEditable.swift in Sources */,
 				C5F53E7C20BFF9E900BE6D75 /* ConstraintPriorityTarget.swift in Sources */,
 				C5F53E9920BFF9E900BE6D75 /* ConstraintItem.swift in Sources */,
+				C5F53EB720C3F55500BE6D75 /* RecHelper.swift in Sources */,
 				C5F53E7B20BFF9E900BE6D75 /* ConstraintMultiplierTarget.swift in Sources */,
 				C5F53E8720BFF9E900BE6D75 /* ConstraintRelatableTarget.swift in Sources */,
 				C5F53E8820BFF9E900BE6D75 /* ConstraintRelation.swift in Sources */,
@@ -457,7 +458,6 @@
 				C5F53E7E20BFF9E900BE6D75 /* ConstraintAttributes.swift in Sources */,
 				C5F53E9820BFF9E900BE6D75 /* Typealiases.swift in Sources */,
 				C5F53E7A20BFF9E900BE6D75 /* ConstraintMakerRelatable.swift in Sources */,
-				C57D095320B84C8500DED69C /* AudioPlaybackSlider.swift in Sources */,
 				C5F53EAF20C1767B00BE6D75 /* Storage.swift in Sources */,
 				C5F53E8920BFF9E900BE6D75 /* ConstraintView.swift in Sources */,
 				C5F53E9B20C0727C00BE6D75 /* Array+nextOrPrev.swift in Sources */,
@@ -615,13 +615,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9VM57AG273;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/DEVChallenge12R2/Configs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Serhii.Vovkotrub.DEVChallenge12R2;
+				PRODUCT_BUNDLE_IDENTIFIER = DEVChallenge12R2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -633,13 +633,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9VM57AG273;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/DEVChallenge12R2/Configs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Serhii.Vovkotrub.DEVChallenge12R2;
+				PRODUCT_BUNDLE_IDENTIFIER = DEVChallenge12R2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

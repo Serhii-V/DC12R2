@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -250,7 +251,74 @@
                     <view key="view" contentMode="scaleToFill" id="97z-p8-mqs" customClass="GradientView" customModule="DEVChallenge12R2" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eHt-oY-ZSq">
+                                <rect key="frame" x="30" y="327.5" width="315" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="BRa-pU-Gh4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K42-Ay-Lvh">
+                                <rect key="frame" x="137" y="60" width="100" height="57.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2El-CI-1oO"/>
+                                    <constraint firstAttribute="width" secondItem="K42-Ay-Lvh" secondAttribute="height" multiplier="61:35" id="8BE-GT-nbI"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="inactiveRecButton">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="recButtonPressed:" destination="0JS-PK-iaG" eventType="touchUpInside" id="5ad-H2-ZSk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXI-GQ-FZa">
+                                <rect key="frame" x="122.5" y="167.5" width="130" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="iQH-Yp-46T"/>
+                                    <constraint firstAttribute="height" constant="50" id="knj-eY-E1Q"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="   Convert" image="audioTocode">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertButtonTapped:" destination="0JS-PK-iaG" eventType="touchUpInside" id="eCx-sE-1fg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3G-2S-PVb">
+                                <rect key="frame" x="82.5" y="247.5" width="210" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="Zjc-Su-QIJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="wfz-pK-68n"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="  Recorded file" image="play">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="0JS-PK-iaG" eventType="touchUpInside" id="3B0-PT-KNd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K42-Ay-Lvh" firstAttribute="centerX" secondItem="QiN-hm-eb2" secondAttribute="centerX" id="4kn-t4-gDT"/>
+                            <constraint firstItem="W3G-2S-PVb" firstAttribute="top" secondItem="AXI-GQ-FZa" secondAttribute="bottom" constant="30" id="Aus-v3-y93"/>
+                            <constraint firstItem="eHt-oY-ZSq" firstAttribute="leading" secondItem="QiN-hm-eb2" secondAttribute="leading" constant="30" id="C3W-6v-zm8"/>
+                            <constraint firstItem="eHt-oY-ZSq" firstAttribute="top" secondItem="W3G-2S-PVb" secondAttribute="bottom" constant="30" id="DHS-u4-pl7"/>
+                            <constraint firstItem="W3G-2S-PVb" firstAttribute="centerX" secondItem="QiN-hm-eb2" secondAttribute="centerX" id="Fhs-Xs-j4t"/>
+                            <constraint firstItem="eHt-oY-ZSq" firstAttribute="centerX" secondItem="QiN-hm-eb2" secondAttribute="centerX" id="L7q-mm-a1i"/>
+                            <constraint firstItem="AXI-GQ-FZa" firstAttribute="centerX" secondItem="QiN-hm-eb2" secondAttribute="centerX" id="MAv-W5-Oty"/>
+                            <constraint firstItem="QiN-hm-eb2" firstAttribute="trailing" secondItem="eHt-oY-ZSq" secondAttribute="trailing" constant="30" id="Sg9-9C-Jsk"/>
+                            <constraint firstItem="K42-Ay-Lvh" firstAttribute="top" secondItem="QiN-hm-eb2" secondAttribute="top" constant="40" id="ZYf-Bp-tnV"/>
+                            <constraint firstItem="AXI-GQ-FZa" firstAttribute="top" secondItem="K42-Ay-Lvh" secondAttribute="bottom" constant="50" id="mS4-OH-Ihy"/>
+                            <constraint firstItem="eHt-oY-ZSq" firstAttribute="leading" secondItem="QiN-hm-eb2" secondAttribute="leading" constant="30" id="rje-Bh-PoW"/>
+                            <constraint firstItem="QiN-hm-eb2" firstAttribute="trailing" secondItem="eHt-oY-ZSq" secondAttribute="trailing" constant="30" id="vks-n0-tOv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QiN-hm-eb2"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -266,6 +334,11 @@
                     <tabBarItem key="tabBarItem" title="Decode" image="decode" id="oEU-JF-hbK">
                         <color key="badgeColor" red="0.98823529409999999" green="1" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="outputTextView" destination="eHt-oY-ZSq" id="BaD-Pw-Ofl"/>
+                        <outlet property="playPauseButton" destination="W3G-2S-PVb" id="VUm-wP-U0g"/>
+                        <outlet property="recButton" destination="K42-Ay-Lvh" id="J5E-cy-8Ge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZX8-jh-GVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,10 +368,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="audioTocode" width="25" height="25"/>
         <image name="backward" width="25" height="25"/>
         <image name="decode" width="25" height="25"/>
         <image name="encode" width="25" height="25"/>
         <image name="forward" width="25" height="25"/>
+        <image name="inactiveRecButton" width="366" height="211"/>
         <image name="play" width="25" height="25"/>
     </resources>
 </document>
